@@ -1,0 +1,29 @@
+abstract class bike
+{
+	int gear, brakes;
+	public void gears(int g)
+	{
+		gear = g;
+		System.out.println("number of gear: "+gear);
+	}
+	public void brakes(int b)
+	{
+		brakes = b;
+		System.out.println("number of brakes: "+gear);
+	}
+	abstract void engine();
+}
+public class AbstractEx extends bike{
+	public void engine()
+	{
+		System.out.println("1000 cc engine");
+	}
+
+	public static void main(String[] args) {
+		AbstractEx obj = new AbstractEx();
+		obj.gears(5);
+		obj.brakes(2);
+        obj.engine();
+	}
+
+}
